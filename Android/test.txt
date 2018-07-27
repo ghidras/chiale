@@ -1,3 +1,0 @@
-Test in Atom
-Test in VS
-Test in Atom again
