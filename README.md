@@ -1,1 +1,1 @@
-This is a personal repository for Chiale
+This is a personal repository of Chiale
