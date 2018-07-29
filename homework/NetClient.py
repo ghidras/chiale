@@ -5,7 +5,7 @@ import threading
 from time import time
 
 LOOP = '127.0.0.1'
-ADDR = '10.131.250.51'
+ADDRESS = '10.131.250.51'
 PORT = 9999
 BUF_SIZE: int = 1024
 
@@ -22,7 +22,7 @@ WIDE_BLANK = 30 * ' '
 # 发送消息到服务器
 def sending(message):
     data = message.encode('utf-8')
-    SOCKET.sendto(data, (ADDR, PORT))
+    SOCKET.sendto(data, (ADDRESS, PORT))
 
 
 # 在本地查找外语角

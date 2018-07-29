@@ -191,9 +191,10 @@ class ServiceThread(threading.Thread):
                 else:
                     print('收到一个不支持的指令：', data)
                     continue
-                if reply != '':
+                if reply == '':
                     # reply 为空串则不发送消息
-                    SERVER_SOCKET.sendto(reply.encode('utf-8'), address)
+                    continue
+                SERVER_SOCKET.sendto(reply.encode('utf-8'), address)
 
         sub_thread = threading.Thread(target=service_loop, args=())
         sub_thread.setDaemon(True)
